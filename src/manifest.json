@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Word Replacer",
+    "version": "1.0",
+  
+    "description": "Replaces occurrences of a word provided by the user with another word provided by the user",
+    "homepage_url": "https://github.com/ossd-s23/Word-Replacer",
+    "icons": {
+      "48": "icons/icon.png"
+    },
+  
+    "permissions": [
+      "activeTab"
+    ],
+  
+    "browser_action": {
+      "default_icon": "icons/icon.png",
+      "default_title": "Word Replacer",
+      "default_popup": "popup/choose_words.html"
+    }
+  }
