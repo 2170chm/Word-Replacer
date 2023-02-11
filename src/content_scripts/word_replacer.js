@@ -12,11 +12,7 @@
      * the second parameter 'newWord' in the current html
      */
     function replace(originalWord, newWord) {
-      const beastImage = document.createElement("img");
-      beastImage.setAttribute("src", beastURL);
-      beastImage.style.height = "100vh";
-      beastImage.className = "beastify-image";
-      document.body.appendChild(beastImage);
+      /* TODO: Traverse the DOM structure of the html and use replaceAll() to replace all occurrences of originalWord with newWord */
     }
   
     /**
