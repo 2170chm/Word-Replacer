@@ -1,3 +1,6 @@
+// Parts of this file were copied from Mozilla's "Your Second Extension"
+// article, found at https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
+
 /**
 * Upon click of the button, send the user input to the script for processing
 */
@@ -24,12 +27,15 @@ function listenForBtnClicks() {
         }
 
         /**
-        * Call the replace() method on the active tab, and call the error report function if an error occurs
+        * If the replace button is clicked, then call the replace() method on
+        * the active tab, and call the error report function if an error occurs.
         */
-        browser.tabs
-        .query({ active: true, currentWindow: true })
-        .then(replace)
-        .catch(reportError);
+        if (e.target.textContent == "Replace") {
+            browser.tabs
+            .query({ active: true, currentWindow: true })
+            .then(replace)
+            .catch(reportError);
+        }
     });
 }
 
